@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Mantis2Trello",
+  "short_name": "Mantis2Trello",
+  "description": "",
+  "version": "0.1",
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "icons": { "16": "Mantis2TrelloIcon16.png",
+           "48": "Mantis2TrelloIcon48.png",
+          "128": "Mantis2TrelloIcon128.png" },
+
+  "page_action" :
+  {
+    "default_icon" : "Mantis2TrelloIcon16.png",
+    "default_title" : "Click to Create Trello Card with this Mantis."
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+        {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+            ],
+        "js": ["jquery.1.7.1.min.js", "client.js","content.js"],
+        "run_at": "document_end"
+        }
+    ], 
+	
+  "permissions": [
+     "http://*/*",
+	 "https://*/*",
+	 "declarativeContent",
+   "storage"
+  ]
+}

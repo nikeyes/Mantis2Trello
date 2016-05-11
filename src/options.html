@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mantis2Trello Options</title>
+</head>
+<style>
+  label {
+    display: inline-block;
+    width: 156px;
+    text-align: right;
+    font-size: 14px;
+  }
+  
+  ul { 
+    list-style-type: none; 
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  .required:after {
+    content:"*";
+    color:red;
+  }
+  </style>
+<body>
+<ul>
+  <li>
+    <label for="trelloAPIKey" class="required">Trello API Key:</label>
+    <input type="text" id="trelloAPIKey" value="PUT_YOUR_API_KEY">
+  </li>
+  <li>
+    <label for="trelloIdMantisList" class="required">Trello Id Mantis List:</label>
+    <input type="text" id="trelloIdMantisList" value="5731ec7a00b6ebac6963b2da">
+  </li>
+  <li>
+    <label for="trelloIdBoard">Trello Board Id:</label>
+    <input type="text" id="trelloIdBoard" value="5731e80d7a5d89a57fa872b1">
+  </li>
+  <li>
+    <label for="trelloIdInmediatoLabel">Trello Id Inmediato Label:</label>
+    <input type="text" id="trelloIdInmediatoLabel" value="5731e80db0dfecc6d13d9843">
+  </li>
+  <li>
+    <label for="trelloIdUrgenteLabel">Trello Id Urgente Label:</label>
+    <input type="text" id="trelloIdUrgenteLabel" value="5731e80db0dfecc6d13d9844">
+  </li>
+  <li>
+    <label for="trelloIdAltaLabel">Trello Id Alta Label:</label>
+    <input type="text" id="trelloIdAltaLabel" value="5731e80db0dfecc6d13d9842">
+  </li>
+</ul>
+<div id="status"></div>
+<button id="save">Save</button>
+<script src="options.js"></script>
+</body>
+</html>
