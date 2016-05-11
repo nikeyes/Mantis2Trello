@@ -37,6 +37,7 @@ var createCard = function() {
     var mantisDescription = document.querySelector('.description').innerText;
     var mantisUrl = window.location.href;
     var mantisPriority = document.querySelectorAll(".row-2")[1].childNodes[1].innerText;
+    var mantisConstructionDate = document.querySelectorAll(".row-1")[6].childNodes[1].innerText;
 
     var cardPriority = '';
     var cardPosition = 'bottom';
@@ -72,7 +73,7 @@ var createCard = function() {
       pos: cardPosition,
       urlSource: mantisUrl,
       idLabels: cardPriority,
-      due: cardDue
+      due: mantisConstructionDate || cardDue
     };
 
     Trello.post('/cards/', newCard, creationSuccess, creationFailure);
