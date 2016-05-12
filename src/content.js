@@ -38,7 +38,11 @@ var createCard = function() {
     var mantisUrl = window.location.href;
     var mantisPriority = document.querySelectorAll(".row-2")[1].childNodes[1].innerText;
     var mantisConstructionDate = document.querySelectorAll(".row-1")[6].childNodes[1].innerText;
-
+    var validateMantisConstructionDate = Date.parse(mantisConstructionDate);
+    if (isNaN(validateMantisConstructionDate)) {
+      mantisConstructionDate = null;
+    }
+    
     var cardPriority = '';
     var cardPosition = 'bottom';
     var cardDue = '';

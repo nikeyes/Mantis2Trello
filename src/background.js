@@ -4,10 +4,10 @@ chrome.runtime.onInstalled.addListener(function() {
     // With a new rule ...
     chrome.declarativeContent.onPageChanged.addRules([
       {
-        // That fires when a page's URL contains a 'mantis' ...
+        // That fires when a page's URL contains a 'mantis/view.php' ...
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlContains: 'mantis' },
+            pageUrl: { urlContains: 'mantis/view.php' },
           })
         ],
         // And shows the extension's page action.

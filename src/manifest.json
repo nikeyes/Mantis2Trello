@@ -20,8 +20,7 @@
   "content_scripts": [
         {
         "matches": [
-            "http://*/*",
-            "https://*/*"
+            "*://*/mantis/view.php*"
             ],
         "js": ["jquery.1.7.1.min.js", "client.js","content.js"],
         "run_at": "document_end"
@@ -29,8 +28,7 @@
     ], 
 	
   "permissions": [
-     "http://*/*",
-	 "https://*/*",
+     "*://*/mantis/view.php*",
 	 "declarativeContent",
    "storage"
   ]
