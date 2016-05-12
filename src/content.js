@@ -24,7 +24,7 @@ var creationSuccess = function(data) {
     chrome.runtime.sendMessage({});
     var mantisForm = 
     document.getElementsByName('bugnote_text')[0].value = 'Trello Url: ' + data.shortUrl;
-    //document.getElementsByName('bugnoteadd')[0].submit();
+    document.getElementsByName('bugnoteadd')[0].submit();
   };
   
   var creationFailure = function(data) {
@@ -37,11 +37,22 @@ var createCard = function() {
     var mantisDescription = document.querySelector('.description').innerText;
     var mantisUrl = window.location.href;
     var mantisPriority = document.querySelectorAll(".row-2")[1].childNodes[1].innerText;
-    var mantisConstructionDate = document.querySelectorAll(".row-1")[6].childNodes[1].innerText;
+    var mantisConstructionDate = null;
+    
+    /*var mantisConstructionDate = document.querySelectorAll(".row-1")[6].childNodes[1].innerText;
     var validateMantisConstructionDate = Date.parse(mantisConstructionDate);
+    
     if (isNaN(validateMantisConstructionDate)) {
       mantisConstructionDate = null;
-    }
+    }*/
+    
+    /*var nodos = document.querySelectorAll(".row-2");
+    for (var i=0; i< nodos.length; i++) {
+      if(nodos[i].querySelectorAll(".category")[0].innerText == 'Fecha_Construccion') {
+        alert(nodos[i].childNodes[1].innerText);
+        mantisConstructionDate = nodos[i].childNodes[1].innerText;
+      }
+    }*/
     
     var cardPriority = '';
     var cardPosition = 'bottom';
@@ -58,16 +69,16 @@ var createCard = function() {
             cardPriority = _mantis2TrelloOptions.trelloIdUrgenteLabel;
             cardPosition = 'top';
             var cardDate = new Date();
-            cardDate.setDate(cardDate.getDate() + 2);
+            cardDate.setDate(cardDate.getDate() + 1);
             cardDue = cardDate.toISOString();
             break;
-        case "alta":
-            cardPriority = _mantis2TrelloOptions.trelloIdAltaLabel;
-            cardPosition = 'top';
-            var cardDate = new Date();
-            cardDate.setDate(cardDate.getDate() + 7);
-            cardDue = cardDate.toISOString();
-            break;
+      case "alta":
+          cardPriority = _mantis2TrelloOptions.trelloIdAltaLabel;
+          cardPosition = 'top';
+          var cardDate = new Date();
+          cardDate.setDate(cardDate.getDate() + 3);
+          cardDue = cardDate.toISOString();
+          break;
     }
 
     var newCard = {
