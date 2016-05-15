@@ -1,6 +1,5 @@
  var _mantis2TrelloOptions = {
     trelloAPIKey: 'PUT_YOUR_API_KEY',
-    trelloIdBoard: '5731e80d7a5d89a57fa872b1',
     trelloIdMantisList: '5731ec7a00b6ebac6963b2da',
     trelloIdInmediatoLabel: '5731e80db0dfecc6d13d9843',
     trelloIdUrgenteLabel: '5731e80db0dfecc6d13d9844',

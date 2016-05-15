@@ -1,6 +1,5 @@
 var mantis2TrelloOptions = {
     trelloAPIKey: 'PUT_YOUR_API_KEY',
-    trelloIdBoard: '5731e80d7a5d89a57fa872b1',
     trelloIdMantisList: '5731ec7a00b6ebac6963b2da',
     trelloIdInmediatoLabel: '5731e80db0dfecc6d13d9843',
     trelloIdUrgenteLabel: '5731e80db0dfecc6d13d9844',
@@ -10,7 +9,6 @@ var mantis2TrelloOptions = {
 function save_options() {
   
   mantis2TrelloOptions.trelloAPIKey = document.getElementById('trelloAPIKey').value;
-  mantis2TrelloOptions.trelloIdBoard = document.getElementById('trelloIdBoard').value;
   mantis2TrelloOptions.trelloIdMantisList = document.getElementById('trelloIdMantisList').value;
   mantis2TrelloOptions.trelloIdInmediatoLabel = document.getElementById('trelloIdInmediatoLabel').value;
   mantis2TrelloOptions.trelloIdUrgenteLabel = document.getElementById('trelloIdUrgenteLabel').value;
@@ -32,7 +30,6 @@ function restore_options() {
   // Use default values.
   chrome.storage.sync.get(mantis2TrelloOptions, function(items) {
     document.getElementById('trelloAPIKey').value = items.trelloAPIKey;
-    document.getElementById('trelloIdBoard').value = items.trelloIdBoard;
     document.getElementById('trelloIdMantisList').value = items.trelloIdMantisList;
     document.getElementById('trelloIdInmediatoLabel').value = items.trelloIdInmediatoLabel;
     document.getElementById('trelloIdUrgenteLabel').value = items.trelloIdUrgenteLabel;
