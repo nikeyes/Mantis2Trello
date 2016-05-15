@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(function() {
         // That fires when a page's URL contains a 'mantis/view.php' ...
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlMatches: '(mantis/view.php|bugs/view.php)' },
+            pageUrl: { urlContains: 'mantis/view.php' },
           })
         ],
         // And shows the extension's page action.
