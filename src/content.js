@@ -1,13 +1,3 @@
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-51911409-5', 'auto');
-ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-ga('require', 'displayfeatures');
-ga('send', 'pageview', '/content.html');
-
  var _mantis2TrelloOptions = {
     trelloAPIKey: 'PUT_YOUR_API_KEY',
     trelloIdMantisList: '5731ec7a00b6ebac6963b2da',
@@ -45,7 +35,7 @@ var oldVersionMantisBugTracker = function () {
 }
   
 var createCard = function() {
-  
+ 
     var mantisSummary = (document.querySelectorAll('.bug-summary')[1] || document.querySelector('.sumary')).innerText;
     var mantisDescription = (document.querySelectorAll('.bug-description')[1] || document.querySelector('.description')).innerText;
     var mantisUrl = window.location.href;
