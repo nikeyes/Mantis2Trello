@@ -4,16 +4,16 @@ Create Trello Card From Mantis Ticket
 ##Configuration Requirements
 ![alt tag](https://raw.githubusercontent.com/nikeyes/Mantis2Trello/master/resources/Configuration.PNG)
 
-1. You need an Trello API Key.
-2. You need the Trello Id List where you want to create Mantis cards.
+1. You need a Trello API Key.
+2. You need to have the Trello's Id List where you want to create Mantis cards.
 
 ## How to obtain Trello API Key
 
-1) Get yout API KEY from: https://trello.com/app-key
+1) Get your API KEY from: https://trello.com/app-key
 
-## How to obtain Trello Id List
+## How to obtain Trello's Id List
 
-1) To get your idList you need to create a board, create a list and add a card:
+1) To get your IdList you need to create a board, to create a list and add a card:
 
 ![alt tag](https://raw.githubusercontent.com/nikeyes/Mantis2Trello/master/resources/GetIdList1.png)
 
