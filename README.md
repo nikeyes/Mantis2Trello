@@ -31,3 +31,13 @@ Create Trello Card From Mantis Ticket
 4) Click to "Export to JSON" and copy IdList:
 
 ![alt tag](https://raw.githubusercontent.com/nikeyes/Mantis2Trello/master/resources/GetIdList4.png)
+
+
+## Use the plugin for the first time
+
+When using the plug -in for the first time , a Trello popup will open to grant access to your boards:
+
+![alt tag](https://raw.githubusercontent.com/nikeyes/Mantis2Trello/master/resources/TrelloPermissions.png)
+
+
+
