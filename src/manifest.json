@@ -3,7 +3,7 @@
   "name": "Mantis2Trello",
   "short_name": "Mantis2Trello",
   "description": "",
-  "version": "0.1",
+  "version": "0.2",
   "background" : {
     "scripts": ["background.js"]
   },
@@ -30,7 +30,8 @@
   "permissions": [
      "*://*/mantis/view.php*",
      "*://*/bugs/view.php*",
-	 "declarativeContent",
+   "declarativeContent",
+    "tabs",
    "storage"
   ],
   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"

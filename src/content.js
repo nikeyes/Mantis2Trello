@@ -21,9 +21,12 @@ var authenticationFailure = function() {
 var creationSuccess = function(data) {
     console.log('Card created successfully. Data returned:' + JSON.stringify(data));
     chrome.runtime.sendMessage({});
-    var mantisForm = 
-    document.getElementsByName('bugnote_text')[0].value = 'Trello Url: ' + data.shortUrl;
-    document.getElementsByName('bugnoteadd')[0].submit();
+    var bugnotes =  document.getElementsByName('bugnote_text')
+    if (bugnotes.length > 0) {
+      document.getElementsByName('bugnote_text')[0].value = 'Trello Url: ' + data.shortUrl;
+      document.getElementsByName('bugnoteadd')[0].submit();
+    }
+    
   };
   
   var creationFailure = function(data) {

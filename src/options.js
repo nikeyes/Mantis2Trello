@@ -10,19 +10,19 @@ ga('send', 'pageview', '/options.html');
 
 var mantis2TrelloOptions = {
     trelloAPIKey: 'PUT_YOUR_API_KEY',
-    trelloIdMantisList: '5731ec7a00b6ebac6963b2da',
-    trelloIdInmediatoLabel: '5731e80db0dfecc6d13d9843',
-    trelloIdUrgenteLabel: '5731e80db0dfecc6d13d9844',
-    trelloIdAltaLabel: '5731e80db0dfecc6d13d9842'
+    trelloIdMantisList: 'PUT_YOUR_ID_LIST',
+    trelloIdInmediatoLabel: '',
+    trelloIdUrgenteLabel: '',
+    trelloIdAltaLabel: ''
 };
 // Saves options to chrome.storage
 function save_options() {
   
   mantis2TrelloOptions.trelloAPIKey = document.getElementById('trelloAPIKey').value;
   mantis2TrelloOptions.trelloIdMantisList = document.getElementById('trelloIdMantisList').value;
-  mantis2TrelloOptions.trelloIdInmediatoLabel = document.getElementById('trelloIdInmediatoLabel').value;
-  mantis2TrelloOptions.trelloIdUrgenteLabel = document.getElementById('trelloIdUrgenteLabel').value;
-  mantis2TrelloOptions.trelloIdAltaLabel = document.getElementById('trelloIdAltaLabel').value;
+  //mantis2TrelloOptions.trelloIdInmediatoLabel = document.getElementById('trelloIdInmediatoLabel').value;
+  //mantis2TrelloOptions.trelloIdUrgenteLabel = document.getElementById('trelloIdUrgenteLabel').value;
+  //mantis2TrelloOptions.trelloIdAltaLabel = document.getElementById('trelloIdAltaLabel').value;
   
   chrome.storage.sync.set(mantis2TrelloOptions, function() {
     // Update status to let user know options were saved.
@@ -41,9 +41,9 @@ function restore_options() {
   chrome.storage.sync.get(mantis2TrelloOptions, function(items) {
     document.getElementById('trelloAPIKey').value = items.trelloAPIKey;
     document.getElementById('trelloIdMantisList').value = items.trelloIdMantisList;
-    document.getElementById('trelloIdInmediatoLabel').value = items.trelloIdInmediatoLabel;
-    document.getElementById('trelloIdUrgenteLabel').value = items.trelloIdUrgenteLabel;
-    document.getElementById('trelloIdAltaLabel').value = items.trelloIdAltaLabel;
+    //document.getElementById('trelloIdInmediatoLabel').value = items.trelloIdInmediatoLabel;
+    //document.getElementById('trelloIdUrgenteLabel').value = items.trelloIdUrgenteLabel;
+    //document.getElementById('trelloIdAltaLabel').value = items.trelloIdAltaLabel;
   });
 }
 
