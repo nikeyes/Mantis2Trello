@@ -38,7 +38,6 @@ var oldVersionMantisBugTracker = function () {
 }
   
 var createCard = function() {
- 
     var mantisSummary = (document.querySelectorAll('.bug-summary')[1] || document.querySelector('.sumary')).innerText;
     var mantisDescription = (document.querySelectorAll('.bug-description')[1] || document.querySelector('.description')).innerText;
     var mantisUrl = window.location.href;

@@ -40,4 +40,5 @@ When using the plug -in for the first time , a Trello popup will open to grant a
 ![alt tag](https://raw.githubusercontent.com/nikeyes/Mantis2Trello/master/resources/TrelloPermissions.png)
 
 
-
+## If plugin doesn't ask for Trello permissions
+Follow this issue: https://github.com/nikeyes/Mantis2Trello/issues/5

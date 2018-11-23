@@ -3,7 +3,7 @@
   "name": "Mantis2Trello",
   "short_name": "Mantis2Trello",
   "description": "",
-  "version": "0.2",
+  "version": "0.3",
   "background" : {
     "scripts": ["background.js"]
   },
@@ -21,7 +21,8 @@
         {
         "matches": [
             "*://*/mantis/view.php*",
-            "*://*/bugs/view.php*"
+            "*://*/bugs/view.php*",
+            "*://*/view.php*"
             ],
         "js": ["jquery.1.7.1.min.js", "client.js","content.js"],
         "run_at": "document_end"
@@ -30,6 +31,7 @@
   "permissions": [
      "*://*/mantis/view.php*",
      "*://*/bugs/view.php*",
+     "*://*/view.php*",
    "declarativeContent",
     "tabs",
    "storage"
